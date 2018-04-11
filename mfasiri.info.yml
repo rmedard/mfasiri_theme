@@ -22,3 +22,4 @@ regions:
 libraries-extend:
   bootstrap/framework:
     - mfasiri/framework
+    - mfasiri/global-scripts
