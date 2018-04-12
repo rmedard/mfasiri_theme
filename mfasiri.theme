@@ -12,13 +12,20 @@ use Drupal\Core\Url;
 
 function mfasiri_preprocess_links(&$variables){
 
-//    $languages = array_keys($variables['links']);
-    $langs = Drupal::languageManager()->getNativeLanguages();
-//    foreach ($variables['links'] as $key => $link ){
-//        if (in_array($key, array('en', 'fr', 'nl'))){
-//
-//        }
-//    }
-	kint($langs);
+    $languages = Drupal::languageManager()->getNativeLanguages();
+    foreach ($languages as $lang ){
+        switch ($lang->getId()){
+            case 'en':
+                $variables['links'][$lang->getId()]['icon'] = 'en.svg';
+                break;
+            case 'fr':
+                $variables['links'][$lang->getId()]['icon'] = 'fr.svg';
+                break;
+            case 'nl':
+                $variables['links'][$lang->getId()]['icon'] = 'nl.svg';
+                break;
+        }
+    }
+	kint($languages);
 	kint($variables['links']);
 }
