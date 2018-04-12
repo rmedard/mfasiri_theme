@@ -6,3 +6,8 @@
  *
  * Place your custom PHP code in this file.
  */
+
+function mfasiri_preprocess_links(&$variables){
+	kint($variables['attributes']);
+	kint($variables['links']);
+}
