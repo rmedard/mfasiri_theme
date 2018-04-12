@@ -8,6 +8,16 @@
  */
 
 function mfasiri_preprocess_links(&$variables){
-	kint($variables['attributes']);
+
+//    $languages = array_keys($variables['links']);
+    $values = '';
+    foreach ($variables['links'] as $key => $link ){
+        $values .= 'key: '. $key;
+    }
+	kint($values);
 	kint($variables['links']);
+}
+
+function validateSiteLanguage($lang) {
+    return in_array($lang, array('en', 'fr', 'nl'));
 }
