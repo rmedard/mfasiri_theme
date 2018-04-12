@@ -7547,3 +7547,9 @@ ul.menu--services-menu li {
   border: 1px solid #93C54B;
   border-radius: 4px;
 }
+section#block-languageswitcher ul {
+  list-style-type: none;
+}
+section#block-languageswitcher ul li {
+  display: inline;
+}
