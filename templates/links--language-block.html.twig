@@ -49,8 +49,8 @@
   {%- endif -%}
     {%- for key, item in links -%}
       <li{{ item.attributes.addClass(key|clean_class) }}>
-          <img src="{{ directory }}/images/flags/{{ item.icon }}" alt="" height="10px" width="auto">
         {%- if item.link -%}
+            <img src="{{ directory }}/images/flags/{{ item.icon }}" alt="" height="15px" width="auto">
           {{ item.link }}
         {%- elseif item.text_attributes -%}
           <span{{ item.text_attributes }}>{{ item.text }}</span>
