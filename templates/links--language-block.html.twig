@@ -50,8 +50,8 @@
     {%- for key, item in links -%}
       <li{{ item.attributes.addClass(key|clean_class) }}>
         {%- if item.link -%}
-            <a href="{{ item.link.url.internalPath }}" xml:lang="en">
-                <img class="language-icon" typeof="foaf:Image" src="{{ directory }}/images/flags/{{ item.icon }}" width="16" height="auto" alt="English" title="English"> {{ item.link.title }}
+            <a href="{{ item.link['#url'].internalPath }}" xml:lang="en">
+                <img class="language-icon" typeof="foaf:Image" src="{{ directory }}/images/flags/{{ item.icon }}" width="16" height="auto" alt="{{ item.link['#title'] }}" title="{{ item.link['#title'] }}"> {{ item.link['#title'] }}
             </a>
           {{ item.link }}
         {%- elseif item.text_attributes -%}
