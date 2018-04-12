@@ -1,7 +1,7 @@
 <?php
 
 use Drupal\Core\Language\LanguageInterface;
-use Drupal\Core\Site\Settings;
+use Drupal\Core\Url;
 
 /**
  * @file
@@ -13,7 +13,7 @@ use Drupal\Core\Site\Settings;
 function mfasiri_preprocess_links(&$variables){
 
 //    $languages = array_keys($variables['links']);
-    $langs = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Settings::get('base_url'));
+    $langs = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromRoute('node.edit'));
 //    foreach ($variables['links'] as $key => $link ){
 //        if (in_array($key, array('en', 'fr', 'nl'))){
 //
