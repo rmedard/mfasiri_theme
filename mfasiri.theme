@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\Core\Language\LanguageInterface;
+use Drupal\Core\Site\Settings;
+
 /**
  * @file
  * Bootstrap sub-theme.
@@ -10,14 +13,12 @@
 function mfasiri_preprocess_links(&$variables){
 
 //    $languages = array_keys($variables['links']);
-    $values = '';
-    foreach ($variables['links'] as $key => $link ){
-        $values .= 'key: '. $key;
-    }
-	kint($values);
+    $langs = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Settings::get('base_url'));
+//    foreach ($variables['links'] as $key => $link ){
+//        if (in_array($key, array('en', 'fr', 'nl'))){
+//
+//        }
+//    }
+	kint($langs);
 	kint($variables['links']);
-}
-
-function validateSiteLanguage($lang) {
-    return in_array($lang, array('en', 'fr', 'nl'));
 }
