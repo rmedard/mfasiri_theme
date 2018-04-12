@@ -13,7 +13,7 @@ use Drupal\Core\Url;
 function mfasiri_preprocess_links(&$variables){
 
 //    $languages = array_keys($variables['links']);
-    $langs = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri('mfasiri.com'));
+    $langs = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri(Drupal::request()->getRequestUri()));
 //    foreach ($variables['links'] as $key => $link ){
 //        if (in_array($key, array('en', 'fr', 'nl'))){
 //
