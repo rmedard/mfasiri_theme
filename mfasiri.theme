@@ -23,6 +23,4 @@ function mfasiri_preprocess_links(&$variables){
                 break;
         }
     }
-	kint($languages);
-	kint($variables['links']);
 }
