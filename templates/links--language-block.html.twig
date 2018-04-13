@@ -51,7 +51,7 @@
       <li{{ item.attributes.addClass(key|clean_class) }}>
         {%- if item.link -%}
             <a href="{{ item.link['#url'].internalPath }}" xml:lang="en">
-                <img class="language-icon" typeof="foaf:Image" src="{{ directory|e }}/images/flags/{{ item.icon|e }}" width="16" height="auto" alt="{{ item.link['#title'] }}" title="{{ item.link['#title'] }}"> {{ item.link['#title'] }}
+                <img class="language-icon" typeof="foaf:Image" src="{{ theme_path }}/images/flags/{{ item.icon|e }}" width="16" height="auto" alt="{{ item.link['#title'] }}" title="{{ item.link['#title'] }}"> {{ item.link['#title'] }}
             </a>
           {#{{ item.link }}#}
         {%- elseif item.text_attributes -%}

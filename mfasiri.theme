@@ -1,8 +1,5 @@
 <?php
 
-use Drupal\Core\Language\LanguageInterface;
-use Drupal\Core\Url;
-
 /**
  * @file
  * Bootstrap sub-theme.
@@ -11,7 +8,7 @@ use Drupal\Core\Url;
  */
 
 function mfasiri_preprocess_links(&$variables){
-
+    $variables['theme_path'] = '/' . drupal_get_path('theme','mfasiri');
     $languages = Drupal::languageManager()->getNativeLanguages();
     foreach ($languages as $lang ){
         switch ($lang->getId()){
