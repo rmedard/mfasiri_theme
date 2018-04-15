@@ -14,14 +14,17 @@ use Drupal\node\NodeInterface;
 
 function mfasiri_preprocess_links(&$variables){
     $currentUrl = Url::fromRoute('<current>');
-    $path = $currentUrl->getInternalPath();
+//    $path = $currentUrl->getInternalPath();
+
+    $route_name = Drupal::service('path.matcher')->isFrontPage() ? '<front>' : '<current>';
+    $path = Url::fromRoute($route_name)->getInternalPath();
 
     $path1 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri('base:' . $currentUrl->toString()));
     $path2 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri('base:' . $path));
 
 //    $current_path = Drupal::service('path.current')->getPath();
-    $path_alias = Drupal::service('path.alias_manager')->getAliasByPath('/'.$path, 'fr');
-    kint(array('path1' => $path1, 'path2' => $path2));
+    $path3 = Drupal::service('path.alias_manager')->getAliasByPath('/'.$path, 'fr');
+    kint(array('path1' => $path1, 'path2' => $path2, 'path3' => $path3));
 //    $node = Drupal::routeMatch()->getParameter('node');
 //    if ($node instanceof NodeInterface) {
 //        try {
