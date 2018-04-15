@@ -16,7 +16,7 @@ function mfasiri_preprocess_links(&$variables){
     $currentUrl = Url::fromRoute('<current>');
     $path = $currentUrl->getInternalPath();
 
-    $path1 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri($currentUrl));
+    $path1 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri($currentUrl->toString()));
     $path2 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri($path));
 
 //    $current_path = Drupal::service('path.current')->getPath();
