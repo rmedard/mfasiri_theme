@@ -6,21 +6,3 @@
  *
  * Place your custom PHP code in this file.
  */
-
-function mfasiri_preprocess_links(&$variables){
-    $variables['theme_path'] = '/' . drupal_get_path('theme','mfasiri');
-    $languages = Drupal::languageManager()->getNativeLanguages();
-    foreach ($languages as $lang ){
-        switch ($lang->getId()){
-            case 'en':
-                $variables['links'][$lang->getId()]['icon'] = 'en.svg';
-                break;
-            case 'fr':
-                $variables['links'][$lang->getId()]['icon'] = 'fr.svg';
-                break;
-            case 'nl':
-                $variables['links'][$lang->getId()]['icon'] = 'nl.svg';
-                break;
-        }
-    }
-}
