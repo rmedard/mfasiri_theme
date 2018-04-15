@@ -19,6 +19,7 @@ function mfasiri_preprocess_links(&$variables){
     $route_name = Drupal::service('path.matcher')->isFrontPage() ? '<front>' : '<current>';
     $path = Url::fromRoute($route_name)->getInternalPath();
 
+    kint(Drupal::languageManager()->getDefinedLanguageTypesInfo());
     $path1 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri('base:' . $currentUrl->toString()));
     $path2 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri('base:' . $path));
 
