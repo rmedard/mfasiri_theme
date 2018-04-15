@@ -1,7 +1,9 @@
 <?php
 
+use Drupal\Core\Entity\EntityMalformedException;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
 
 /**
  * @file
@@ -11,9 +13,19 @@ use Drupal\Core\Url;
  */
 
 function mfasiri_preprocess_links(&$variables){
-    $current_url = Url::fromRoute('<current>', array('language' => Drupal::languageManager()->getLanguage('fr')->getId()));
-    $variables['current_path'] = $current_url->toString();
-    kint($current_url->toString());
+    $node = Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+        try {
+            $current_url = $node->getTranslation('fr')->toUrl();
+        } catch (EntityMalformedException $e) {
+            $current_url = 'byazambye...';
+        }
+        kint($current_url->toString());
+    }
+
+//    $current_url = Url::fromRoute('<current>', array('language' => Drupal::languageManager()->getLanguage('fr')->getId()));
+//    $variables['current_path'] = $current_url->toString();
+//    kint($current_url->toString());
 //    $variables['theme_path'] = '/' . drupal_get_path('theme','mfasiri');
 ////    $options = ['absolute' => TRUE];
 ////    $languages = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromRoute('entity.node.canonical', ['node' => 6], $options));
