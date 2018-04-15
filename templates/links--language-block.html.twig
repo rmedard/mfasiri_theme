@@ -50,7 +50,7 @@
     {%- for key, item in links -%}
       <li{{ item.attributes.addClass(key|clean_class) }}>
         {%- if item.link -%}
-            <a href="{{ item.link }}" {{ item.attributes.addClass('lang-sm lang-lbl-en') }} lang="{{ item.attributes.hreflang }}"></a>
+            <a href="{{ item.link.title }}" {{ item.attributes.addClass('lang-sm lang-lbl-en') }} lang="{{ item.attributes.hreflang }}"></a>
           {{ item.link }}
         {%- elseif item.text_attributes -%}
           <span{{ item.text_attributes }}>{{ item.text }}</span>
