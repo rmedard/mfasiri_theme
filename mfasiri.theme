@@ -12,8 +12,9 @@ use Drupal\Core\Url;
 
 function mfasiri_preprocess_links(&$variables){
     $current_url = Url::fromRoute('<current>');
-    $path = $current_url->toString();
-    kint($path);
+    $links = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, $current_url);
+    $variables['current_path'] = $current_url->toString();
+    kint($links);
 //    $variables['theme_path'] = '/' . drupal_get_path('theme','mfasiri');
 ////    $options = ['absolute' => TRUE];
 ////    $languages = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromRoute('entity.node.canonical', ['node' => 6], $options));
