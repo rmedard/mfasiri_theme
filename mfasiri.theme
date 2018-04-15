@@ -13,15 +13,18 @@ use Drupal\node\NodeInterface;
  */
 
 function mfasiri_preprocess_links(&$variables){
-    $node = Drupal::routeMatch()->getParameter('node');
-    if ($node instanceof NodeInterface) {
-        try {
-            $current_url = $node->getTranslation('fr')->toUrl();
-        } catch (EntityMalformedException $e) {
-            $current_url = 'byazambye...';
-        }
-        kint($current_url->toString());
-    }
+    $current_path = Drupal::service('path.current')->getPath();
+    $path_alias = Drupal::service('path.alias_manager')->getAliasByPath($current_path, 'fr');
+    kint($path_alias);
+//    $node = Drupal::routeMatch()->getParameter('node');
+//    if ($node instanceof NodeInterface) {
+//        try {
+//            $current_url = $node->getTranslation('fr')->toUrl();
+//        } catch (EntityMalformedException $e) {
+//            $current_url = 'byazambye...';
+//        }
+////        kint($current_url->toString());
+//    }
 
 //    $current_url = Url::fromRoute('<current>', array('language' => Drupal::languageManager()->getLanguage('fr')->getId()));
 //    $variables['current_path'] = $current_url->toString();
