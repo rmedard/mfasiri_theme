@@ -24,7 +24,8 @@ function mfasiri_preprocess_links(&$variables){
 
 //    $current_path = Drupal::service('path.current')->getPath();
     $path3 = Drupal::service('path.alias_manager')->getAliasByPath('/'.$path, 'fr');
-    kint(array('path1' => $path1, 'path2' => $path2, 'path3' => $path3));
+    $path4 = Drupal::service('path.alias_storage')->lookupPathAlias('/'.$path, 'fr');
+    kint(array('path1' => $path1, 'path2' => $path2, 'path3' => $path3, 'path4' => $path4));
     kint($variables['links']);
 //    $node = Drupal::routeMatch()->getParameter('node');
 //    if ($node instanceof NodeInterface) {
