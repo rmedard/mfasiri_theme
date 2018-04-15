@@ -1,6 +1,7 @@
 framework:
   css:
     theme:
+      bootstrap-languages/languages.min.css: {}
       css/style.css: {}
   js:
     bootstrap/js/affix.js: {}
