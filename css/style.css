@@ -7387,6 +7387,24 @@ p:last-child,
 .control-group .help-inline:first-child {
   margin-top: 0;
 }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
 .sandstone {
   font-size: 11px;
   line-height: 22px;
@@ -7552,4 +7570,7 @@ section#block-languageswitcher ul {
 }
 section#block-languageswitcher ul li {
   display: inline;
+}
+div#views-bootstrap-services-block-services-caroussel > div.carousel-inner div.item > div.carousel-caption {
+  background: rgba(15, 15, 15, 0.6);
 }
