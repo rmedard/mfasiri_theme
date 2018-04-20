@@ -13,48 +13,19 @@ use Drupal\node\NodeInterface;
  */
 
 function mfasiri_preprocess_links(&$variables){
-    $currentUrl = Url::fromRoute('<current>');
-//    $path = $currentUrl->getInternalPath();
+//    $currentUrl = Url::fromRoute('<current>');
+////    $path = $currentUrl->getInternalPath();
+//
+//    $route_name = Drupal::service('path.matcher')->isFrontPage() ? '<front>' : '<current>';
+//    $path = Url::fromRoute($route_name)->getInternalPath();
+//
+//    $path1 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri('base:' . $currentUrl->toString()));
+//    $path2 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri('base:' . $path));
+//
+////    $current_path = Drupal::service('path.current')->getPath();
+//    $path3 = Drupal::service('path.alias_manager')->getAliasByPath('/'.$path, 'fr');
+//    $path4 = Drupal::service('path.alias_storage')->lookupPathAlias('/'.$path, 'fr');
+//    kint(array('path1' => $path1, 'path2' => $path2, 'path3' => $path3, 'path4' => $path4));
+//    kint($variables['links']);
 
-    $route_name = Drupal::service('path.matcher')->isFrontPage() ? '<front>' : '<current>';
-    $path = Url::fromRoute($route_name)->getInternalPath();
-
-    $path1 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri('base:' . $currentUrl->toString()));
-    $path2 = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromUri('base:' . $path));
-
-//    $current_path = Drupal::service('path.current')->getPath();
-    $path3 = Drupal::service('path.alias_manager')->getAliasByPath('/'.$path, 'fr');
-    $path4 = Drupal::service('path.alias_storage')->lookupPathAlias('/'.$path, 'fr');
-    kint(array('path1' => $path1, 'path2' => $path2, 'path3' => $path3, 'path4' => $path4));
-    kint($variables['links']);
-//    $node = Drupal::routeMatch()->getParameter('node');
-//    if ($node instanceof NodeInterface) {
-//        try {
-//            $current_url = $node->getTranslation('fr')->toUrl();
-//        } catch (EntityMalformedException $e) {
-//            $current_url = 'byazambye...';
-//        }
-////        kint($current_url->toString());
-//    }
-
-//    $current_url = Url::fromRoute('<current>', array('language' => Drupal::languageManager()->getLanguage('fr')->getId()));
-//    $variables['current_path'] = $current_url->toString();
-//    kint($current_url->toString());
-//    $variables['theme_path'] = '/' . drupal_get_path('theme','mfasiri');
-////    $options = ['absolute' => TRUE];
-////    $languages = Drupal::languageManager()->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, Url::fromRoute('entity.node.canonical', ['node' => 6], $options));
-//    kint($variables);
-//    foreach ($languages as $lang ){
-//        switch ($lang->getId()){
-//            case 'en':
-//                $variables['links'][$lang->getId()]['icon'] = 'en.svg';
-//                break;
-//            case 'fr':
-//                $variables['links'][$lang->getId()]['icon'] = 'fr.svg';
-//                break;
-//            case 'nl':
-//                $variables['links'][$lang->getId()]['icon'] = 'nl.svg';
-//                break;
-//        }
-//    }
 }
