@@ -7574,3 +7574,6 @@ section#block-languageswitcher ul li {
 div#views-bootstrap-services-block-services-caroussel > div.carousel-inner div.item > div.carousel-caption {
   background: rgba(15, 15, 15, 0.6);
 }
+.page-header {
+  text-align: center;
+}
