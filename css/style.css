@@ -7586,4 +7586,5 @@ div.homepage-services div.row > div {
 }
 div.homepage-services div.row > div a > img {
   border-radius: 5px;
+  width: 100%;
 }
