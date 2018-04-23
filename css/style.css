@@ -7577,3 +7577,9 @@ div#views-bootstrap-services-block-services-caroussel > div.carousel-inner div.i
 .page-header {
   text-align: center;
 }
+div.homepage-services {
+  margin-top: 10px;
+}
+div.homepage-services ul.media-list > li.media > div > a > img {
+  border-radius: 5px;
+}
