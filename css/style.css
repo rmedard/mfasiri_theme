@@ -7580,11 +7580,13 @@ div#views-bootstrap-services-block-services-caroussel > div.carousel-inner div.i
 div.homepage-services {
   margin-top: 10px;
 }
-div.homepage-services div.row > div {
-  padding-right: 0;
-  padding-left: 0;
-}
-div.homepage-services div.row > div a > img {
+div.homepage-services div.row div > a > img {
   border-radius: 5px;
   width: 100%;
+}
+div.homepage-services div.row div.right-side {
+  padding-left: 0;
+}
+div.homepage-services div.row div.left-side {
+  padding-right: 0;
 }
