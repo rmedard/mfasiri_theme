@@ -7597,3 +7597,6 @@ section.mailchimp-signup-subscribe-form {
 section.mailchimp-signup-subscribe-form form#mailchimp-signup-subscribe-block-general-newsletter-form > div.form-actions {
   margin-top: 10px;
 }
+.block-title {
+  text-align: center;
+}
