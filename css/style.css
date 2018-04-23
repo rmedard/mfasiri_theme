@@ -7600,3 +7600,10 @@ section.mailchimp-signup-subscribe-form form#mailchimp-signup-subscribe-block-ge
 .block-title {
   text-align: center;
 }
+ul#mfasiri-languages {
+  list-style-type: none;
+}
+ul#mfasiri-languages li {
+  display: inline;
+  padding: 0 0.5em;
+}
