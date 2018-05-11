@@ -7561,6 +7561,9 @@ input:focus,
 .panel-default .panel-footer {
   color: #98978B;
 }
+a.logo > img {
+  max-height: 45px;
+}
 ul.menu--services-menu li {
   border: 1px solid #93C54B;
   border-radius: 4px;
