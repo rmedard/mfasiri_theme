@@ -9,6 +9,7 @@ package: 'Bootstrap'
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
+  mfasiri_nav_right: 'Mfasiri Navbar Right'
   header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'

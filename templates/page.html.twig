@@ -82,7 +82,10 @@
       {# Navigation (collapsible) #}
       {% if page.navigation_collapsible %}
         <div id="navbar-collapse" class="navbar-collapse collapse">
-          {{ page.navigation_collapsible }}
+            <div class="row">
+                <div class="col-md-9">{{ page.navigation_collapsible }}</div>
+                <div class="col-md-3">{{ page.mfasiri_nav_right }}</div>
+            </div>
         </div>
       {% endif %}
       {% if not navbar_attributes.hasClass(container) %}
