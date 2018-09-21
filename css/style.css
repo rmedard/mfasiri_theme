@@ -7662,12 +7662,6 @@ ul.menu--services-menu li {
 ul.menu--services-menu li a {
   color: #3E3F3A;
 }
-section#block-languageswitcher ul {
-  list-style-type: none;
-}
-section#block-languageswitcher ul li {
-  display: inline;
-}
 div#views-bootstrap-services-block-services-caroussel > div.carousel-inner div.item > div.carousel-caption {
   background: rgba(15, 15, 15, 0.65);
 }
