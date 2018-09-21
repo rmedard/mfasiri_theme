@@ -17,5 +17,5 @@
     $('section.block-mailchimp-signup').addClass('well well-sm');
     $('div.field.field--name-field-content-left').addClass('col-md-6 well well-sm');
     $('div.field.field--name-field-content-right').addClass('col-md-6 well well-sm');
-    $('section#block-mailchimpsubscriptionformgeneralnewsletter').addClass('well well-sm');
+    $('section.mailchimp-signup-subscribe-form').addClass('well well-sm');
 }(jQuery));
