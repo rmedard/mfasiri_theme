@@ -7703,7 +7703,7 @@ select.lang-dropdown-select-element {
 }
 section#block-languageswitcher > ul > li {
   list-style: none;
-  margin: 10px;
+  display: inline;
 }
 section#block-languageswitcher > ul > li a img {
   display: inline-block;
