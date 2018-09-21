@@ -7701,6 +7701,10 @@ ul#mfasiri-languages li {
 select.lang-dropdown-select-element {
   width: inherit;
 }
+section#block-languageswitcher > ul > li {
+  list-style: none;
+  margin: 10px;
+}
 section#block-languageswitcher > ul > li a img {
   display: inline-block;
 }
