@@ -21,3 +21,6 @@ global-scripts:
     js/custom.js: {}
   dependencies:
     - core/jquery
+facebook-scripts:
+  js:
+    js/facebook.js: {header: true}
