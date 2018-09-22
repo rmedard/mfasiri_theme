@@ -24,4 +24,5 @@ regions:
 libraries-extend:
   bootstrap/framework:
     - mfasiri/framework
+    - mfasiri/facebook-scripts
     - mfasiri/global-scripts
