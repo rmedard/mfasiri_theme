@@ -10,5 +10,6 @@
     $('section.mailchimp-signup-subscribe-form').addClass('well well-sm');
     $('section#block-socialmedialinks').addClass('well well-sm');
     $('div#views-bootstrap-ibiganiro-page-tuganire > div.media').addClass('well well-sm');
+    $('div#views-bootstrap-twihugure-page-twihugure > div.media').addClass('well well-sm');
 
 }(jQuery));
