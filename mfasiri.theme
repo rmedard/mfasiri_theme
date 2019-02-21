@@ -7,7 +7,7 @@
  * Place your custom PHP code in this file.
  */
 
-function mfasiri_page_title(&$variables)
+function mfasiri_preprocess_page_title(&$variables)
 {
     $path = Drupal::request()->getPathInfo();
     if ($path == '/tuganire') {
