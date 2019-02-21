@@ -7712,7 +7712,8 @@ section#block-languageswitcher ul > li a img {
   display: inline-block;
 }
 div.field--name-field-forum-image,
-div.field--name-field-course-image {
+div.field--name-field-course-image,
+div.field--name-field-course-youtube-podcast {
   display: flex;
   justify-content: center;
 }
