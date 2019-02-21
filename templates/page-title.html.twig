@@ -17,5 +17,6 @@
  */
 #}
 {% if title %}
+  {{ kint(title_attributes) }}
   <h2{{ title_attributes.addClass('page-header') }}>{{ title }}</h2>
 {% endif %}
