@@ -13,6 +13,6 @@ use Drupal\node\NodeInterface;
  */
 
 function mfasiri_page_title(&$variables) {
-    kint($variables);
+    kint(Drupal::request()->getPathInfo());
     die();
 }
