@@ -7711,7 +7711,8 @@ section#block-languageswitcher ul > li {
 section#block-languageswitcher ul > li a img {
   display: inline-block;
 }
-div.field--name-field-forum-image {
+div.field--name-field-forum-image,
+div.field--name-field-course-image {
   display: flex;
   justify-content: center;
 }
