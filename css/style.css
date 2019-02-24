@@ -7662,6 +7662,13 @@ ul.menu--services-menu li {
 ul.menu--services-menu li a {
   color: #3E3F3A;
 }
+ul.menu--kinyarwanda-platform li {
+  border: 1px solid #325D88;
+  border-radius: 5px;
+}
+ul.menu--kinyarwanda-platform li a {
+  color: #3E3F3A;
+}
 div#views-bootstrap-services-block-services-caroussel > div.carousel-inner div.item > div.carousel-caption {
   background: rgba(15, 15, 15, 0.65);
 }
