@@ -28,6 +28,7 @@
       %}
       {%
         set item_classes = [
+          'nav-pills nav-stacked',
           item.is_expanded and item.below ? 'expanded dropdown',
           item.in_active_trail ? 'active active-trail',
           loop.first ? 'first',
