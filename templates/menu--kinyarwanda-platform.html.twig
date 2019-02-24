@@ -22,7 +22,7 @@
 {% macro menu_links(items, attributes, menu_level, classes, dropdown_classes) %}
   {% if items %}
     {%
-      attributes.addClass('nav-pills nav-stacked')
+      set classes = [classes, 'nav-pills nav-stacked']
     %}
     <ul{{ attributes.addClass(menu_level == 0 ? classes : dropdown_classes) }}>
     {% for item in items %}
