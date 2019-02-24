@@ -7658,6 +7658,7 @@ a.logo > img {
 ul.menu--services-menu li {
   border: 1px solid #93C54B;
   border-radius: 5px;
+  background: #F8F5F0;
 }
 ul.menu--services-menu li a {
   color: #3E3F3A;
