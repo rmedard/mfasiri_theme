@@ -21,6 +21,9 @@
 #}
 {% macro menu_links(items, attributes, menu_level, classes, dropdown_classes) %}
   {% if items %}
+    {%
+      set classes = ['nav-pills nav-stacked']
+    %}
     <ul{{ attributes.addClass(menu_level == 0 ? classes : dropdown_classes) }}>
     {% for item in items %}
       {%
@@ -28,7 +31,6 @@
       %}
       {%
         set item_classes = [
-          'nav-pills nav-stacked',
           item.is_expanded and item.below ? 'expanded dropdown',
           item.in_active_trail ? 'active active-trail',
           loop.first ? 'first',
