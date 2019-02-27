@@ -11,8 +11,10 @@ function mfasiri_preprocess_page_title(&$variables)
 {
     $path = Drupal::request()->getPathInfo();
     if ($path == '/kinyarwanda/duhugurane') {
-        $route = Drupal::routeMatch()->getRouteObject();
-        kint($route);
+        $routeObject = Drupal::routeMatch()->getRouteObject();
+        $view_id = $routeObject->getDefault('view_id');
+        $display_id = $routeObject->getDefault('display_id');
+        kint(array($view_id, $display_id));
         die();
         $variables['topics_page'] = true;
     }
