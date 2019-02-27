@@ -9,13 +9,10 @@
 
 function mfasiri_preprocess_page_title(&$variables)
 {
-    $path = Drupal::request()->getPathInfo();
-    if ($path == '/kinyarwanda/duhugurane') {
-        $routeObject = Drupal::routeMatch()->getRouteObject();
-        $view_id = $routeObject->getDefault('view_id');
-        $display_id = $routeObject->getDefault('display_id');
-        kint(array($view_id, $display_id));
-        die();
+    $routeObject = Drupal::routeMatch()->getRouteObject();
+    $view_id = $routeObject->getDefault('view_id');
+    $display_id = $routeObject->getDefault('display_id');
+    if ($view_id == 'ibiganiro' and $display_id == 'page_duhugurane') {
         $variables['topics_page'] = true;
     }
 }
